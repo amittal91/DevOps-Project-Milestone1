@@ -63,7 +63,8 @@ sudo apt-get install jenkins
    * Make changes in either pom.xml or .java file 
    * Add, Commit and Push the changes
    * Build will be triggered in Jenkins
-   * Go to the job tracking this branch and check the console output, status and email
+   * Go to the job tracking this branch and check the console output, status, build history
+   * Check your inbox to see if email is successfully delivered.
 
 ## Screencast Link ##
 
