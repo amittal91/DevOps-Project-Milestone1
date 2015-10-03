@@ -24,7 +24,7 @@ For the ability to send email notifications, we configured a SMTP Server on our 
 `sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'`<br/>
 `sudo apt-get update `<br/>
 `sudo apt-get install jenkins`
-  * Test if Jenkins server is up at the following URL<br/> `http://<droplet_ip>:8080`
+  * Test if Jenkins server is up at the following URL<br/> `http://<droplet_ip>:<jenkins_port>`
   * Configuring Jenkins
     * Manage Jenkins --> Configure Global Security --> Enable security --> Select Jenkin's own user database under Security Realm --> Allow users to sign up --> Matrix based security in Authorization --> Add user and give it all permissions --> Apply
     * Go to Jenkin's home and sign up (Provide details like username, password, email, etc)
@@ -36,6 +36,22 @@ For the ability to send email notifications, we configured a SMTP Server on our 
     * Manage Jenkins --> Configure System --> Add Maven installation with a Name like 'Apache Maven 3.0.5' and the path to your Maven home --> Save
     * Manage Jenkins --> Configure System --> Add localhost as the SMTP Server in Email Notification --> Save
     * Set maven
+  * Configuring GitHub Web Hook and Services
+    * Go to GitHub Settings --> Webhooks & Services --> Add Service - Jenkins (GitHub plugin) --> Enter Jenkins Hook URL as <br/>
+`http://<droplet_ip>:<jenkins_port>/github-webhook/`
+  * Configuring Jenkins Job
+    * Go to Jenkins Home --> New Item --> Enter a name and select Maven project 
+    * Select Git under Source Code Management --> Enter your GitHub Repo --> Specify branch in 'Branches to Build'
+    * Select 'Build when a change is pushed to GitHub ' under Build Triggers
+    * Add the Root POM and Goals i.e. `clean install` in Build
+    * Add Post-Build action --> Editable Email Notification --> Configure email options as needed
+  * Test the build
+    * Clone the repo
+    * Checkout to the concerned branch
+    * Make changes in either pom.xml or .java file 
+    * Add, Commit and Push the changes
+    * Build will be triggered in Jenkins
+    * Go to the job tracking this branch and check the console output, status and email
 
 ### Tasks Performed ###
 | Sr. No. | Task | Performed by |
@@ -50,7 +66,7 @@ For the ability to send email notifications, we configured a SMTP Server on our 
 | 8. | Setting up Jenkins jobs to track different branches | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman |
 | 9. | Demo | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman|
 
-### Demo ###
+### Screencast Link ###
 
-
+[Demo] (https://youtu.be/BcmmR_9KW-g)
 
