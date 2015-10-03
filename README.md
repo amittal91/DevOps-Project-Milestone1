@@ -12,7 +12,10 @@ configured such that the build would be triggered by the Service Hook when a pus
 
 For the ability to send email notifications, we configured a SMTP Server on our Digital Ocean Droplet.
 
-`NOTE: The code and config files for two jobs will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs`
+```NOTE:
+1. The code and config files for two jobs will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs
+2. Please refer to TEAM.md for Team information and Task distribution
+```
 
 ### Build ###
 #### Setup Steps ####
@@ -22,10 +25,13 @@ For the ability to send email notifications, we configured a SMTP Server on our 
   * Install git <br/> ``
   * Install maven <br/>
   * Install mailutils <br/>
-  * Install Jenkins using the following commands<br/>`wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add - `<br/>
-`sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'`<br/>
-`sudo apt-get update `<br/>
-`sudo apt-get install jenkins`
+  * Install Jenkins using the following commands<br/>
+```
+wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add - 
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+```
   * Test if Jenkins server is up at the following URL<br/> `http://<droplet_ip>:<jenkins_port>`
   * Configuring Jenkins
     * Manage Jenkins --> Configure Global Security --> Enable security --> Select Jenkin's own user database under Security Realm --> Allow users to sign up --> Matrix based security in Authorization --> Add user and give it all permissions --> Apply
@@ -47,13 +53,13 @@ For the ability to send email notifications, we configured a SMTP Server on our 
     * Select 'Build when a change is pushed to GitHub ' under Build Triggers
     * Add the Root POM and Goals i.e. `clean install` in Build
     * Add Post-Build action --> Editable Email Notification --> Configure email options as needed
-  * Test the build
-    * Clone the repo
-    * Checkout to the concerned branch
-    * Make changes in either pom.xml or .java file 
-    * Add, Commit and Push the changes
-    * Build will be triggered in Jenkins
-    * Go to the job tracking this branch and check the console output, status and email
+* Test the build
+  * Clone the repo
+  * Checkout to the concerned branch
+  * Make changes in either pom.xml or .java file 
+  * Add, Commit and Push the changes
+  * Build will be triggered in Jenkins
+  * Go to the job tracking this branch and check the console output, status and email
 
 ### Screencast Link ###
 
