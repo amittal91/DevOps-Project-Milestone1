@@ -36,3 +36,21 @@ For the ability to send email notifications, we configured a SMTP Server on our 
     * Manage Jenkins --> Configure System --> Add Maven installation with a Name like 'Apache Maven 3.0.5' and the path to your Maven home --> Save
     * Manage Jenkins --> Configure System --> Add localhost as the SMTP Server in Email Notification --> Save
     * Set maven
+
+### Tasks Performed ###
+| Sr. No. | Task | Performed by |
+|---------|------|--------------|
+| 1. | Initial Research | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman|
+| 2. | Setting up a Digital Ocean Droplet | Apoorv Mittal |
+| 3. | Installing pre-requisites on the Droplet | Abhishek Preman |
+| 4. | Setting up / Configuring Jenkins | Karishma Nimgaonkar, Apoorv Mittal |
+| 5. | Installing & Configuring SMTP Server on the droplet | Apoorv Mittal | 
+| 6. | Configuring GitHub Web Hook and Services | Karishma Nimgaonkar |
+| 7. | Setting up GitHub Repo & Branches | Karishma Nimgaonkar, Apoorv Mittal |
+| 8. | Setting up Jenkins jobs to track different branches | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman |
+| 9. | Demo | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman|
+
+### Demo ###
+
+
+
