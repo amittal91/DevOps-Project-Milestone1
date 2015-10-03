@@ -27,13 +27,14 @@ NOTE:
   * Install maven <br/> `sudo apt-get install maven`
   * Install mailutils [link] (https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04) <br/>
   * Install Jenkins using the following commands<br/> 
-    ```
-    wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add - 
-    sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
-    sudo apt-get update
-    sudo apt-get install jenkins
-    ```
+```
+wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add - 
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+```
   * Test if Jenkins server is up at the following URL<br/> `http://<droplet_ip>:<jenkins_port>`
+
 #### Configuring Jenkins ####
    * Manage Jenkins --> Configure Global Security --> Enable security --> Select Jenkin's own user database under Security Realm --> Allow users to sign up --> Matrix based security in Authorization --> Add user and give it all permissions --> Apply
    * Go to Jenkin's home and sign up (Provide details like username, password, email, etc)
