@@ -5,14 +5,15 @@ We have used Jenkins as the Build Server for this Milestone. We have used a Digi
 
 Our github repo has two branches which would be tracked by two different Jenkins jobs. Whenever a local commit is pushed to a remote branch, the build job corresponding to that branch will be triggered in Jenkins via Git Service Hooks configured in the GitHub repo.
 
-We have configured two jobs to display two scenarios:<br/>
+We have configured two jobs to display two scenarios:
 * The first branch called mavenSuccess would be tracked by a Jenkins job called M1-mavenSuccess. This job is
-configured such that the build would be triggered by the Service Hook when a push is made to mavenSuccess branch. For the post build task, we have sent email notifications to a list of users with custom subject and content indicating 'Successful Build' if the end result of the build was 'Success'. <br/>
-* The second branch called mavenFailure would be tracked by a Jenkins job called M1-mavenFailure. This job is configured such that the build would be triggered by the Service Hook when a push is made to mavenFailure branch. For the post build task, we have sent email notifications to a list of users when the build status is either 'Failure' or 'Fixed'.<br/>
+configured such that the build would be triggered by the Service Hook when a commit is pushed to mavenSuccess branch. For the post build task, we have sent email notifications to a list of users with custom subject and content indicating 'Successful Build' if the end result of the build was 'Success'. 
+* The second branch called mavenFailure would be tracked by a Jenkins job called M1-mavenFailure. This job is configured such that the build would be triggered by the Service Hook when a commit is pushed to mavenFailure branch. For the post build task, we have sent email notifications to a list of users when the build status is either 'Failure' or 'Fixed'.
 
-For the ability to send email notifications, we configured a SMTP Server on our Digital Ocean Droplet.
+For the ability to send email notifications, we configured a SMTP Server on our Digital Ocean Droplet by following this [link] (https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04)
 
-```NOTE:
+```
+NOTE:
 1. The code and config files for two jobs will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs
 2. Please refer to TEAM.md for Team information and Task distribution
 ```
@@ -22,9 +23,9 @@ For the ability to send email notifications, we configured a SMTP Server on our 
 * Create a Digital Ocean Droplet for hosting the Jenkins Server
 * ssh into the image and install the pre-requisites mentioned below:
   * Install jdk <br/> `sudo apt-get install openjdk-7-jdk`
-  * Install git <br/> ``
-  * Install maven <br/>
-  * Install mailutils <br/>
+  * Install git <br/> `sudo apt-get install git`
+  * Install maven <br/> `sudo apt-get install maven`
+  * Install mailutils [link] (https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp-server-on-ubuntu-14-04) <br/>
   * Install Jenkins using the following commands<br/>
 ```
 wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add - 
