@@ -55,19 +55,6 @@ For the ability to send email notifications, we configured a SMTP Server on our 
     * Build will be triggered in Jenkins
     * Go to the job tracking this branch and check the console output, status and email
 
-### Tasks Performed ###
-| Sr. No. | Task | Performed by |
-|---------|------|--------------|
-| 1. | Initial Research | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman|
-| 2. | Setting up a Digital Ocean Droplet | Apoorv Mittal |
-| 3. | Installing pre-requisites on the Droplet | Abhishek Preman |
-| 4. | Setting up / Configuring Jenkins | Karishma Nimgaonkar, Apoorv Mittal |
-| 5. | Installing & Configuring SMTP Server on the droplet | Apoorv Mittal | 
-| 6. | Configuring GitHub Web Hook and Services | Karishma Nimgaonkar |
-| 7. | Setting up GitHub Repo & Branches | Karishma Nimgaonkar, Apoorv Mittal |
-| 8. | Setting up Jenkins jobs to track different branches | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman |
-| 9. | Demo | Karishma Nimgaonkar, Apoorv Mittal, Abhishek Preman|
-
 ### Screencast Link ###
 
 [Demo] (https://youtu.be/BcmmR_9KW-g)
