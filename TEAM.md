@@ -1,7 +1,7 @@
-## DevOps Project Team ## 
+## DevOps Project Team
 
 ### Team Name ###
-Trilith
+Team Trilith
 
 ### Team Members ###
 * Abhishek Preman - apreman@ncsu.edu
