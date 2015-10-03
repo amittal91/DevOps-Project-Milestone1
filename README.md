@@ -14,8 +14,9 @@ For the ability to send email notifications, we configured a SMTP Server on our 
 
 ```
 NOTE:
-1. The code and config files for two jobs will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs
-2. Please refer to TEAM.md for Team information and Task distribution
+1. The code and config.xml files for two jobs will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs
+2. Please refer to TEAM.md in Master branch for Team information and Task distribution
+3. Please refer to config.xml in Master branch for Jenkins Configuration
 ```
 
 ##Build##
