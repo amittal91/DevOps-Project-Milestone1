@@ -1,3 +1,3 @@
 # DevOps-Project
 ## M1 ##
-Please refer to branch milestone1 for README.md, code, screencast
+Please refer to branch master for README.md, team information and screencast
