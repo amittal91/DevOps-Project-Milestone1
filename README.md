@@ -12,7 +12,7 @@ configured such that the build would be triggered by the Service Hook when a pus
 
 For the ability to send email notifications, we configured a SMTP Server on our Digital Ocean Droplet.
 
-`NOTE: The code will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs`
+`NOTE: The code and config files for two jobs will be in two other branches of this repo i.e. mavenSuccess and mavenFailure which are being tracked by two jenkins jobs`
 
 ### Build ###
 #### Setup Steps ####
