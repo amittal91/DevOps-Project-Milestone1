@@ -1,18 +1,6 @@
 # DevOps-Project : Milestone 1 (M1)
 ## Introduction ##
 
-We have used Jenkins as the Build Server for this Milestone. We have used a Digital Ocean Droplet - Ubuntu 14.04 x64 to host Jenkins Server. We used a sample Apache Maven Project with a single Junit Test for Build task.
-
-Our github repo has two branches which would be tracked by two different Jenkins jobs. Whenever a local commit is pushed to a remote branch, the build job corresponding to that branch will be triggered in Jenkins via Git Service Hooks configured in the GitHub repo.
-
-We have configured two jobs to display two scenarios:
-* The first branch called mavenSuccess would be tracked by a Jenkins job called M1-mavenSuccess. This job is
-configured such that the build would be triggered by the Service Hook when a commit is pushed to mavenSuccess branch. For the post build task, we have sent email notifications to a list of users with custom subject and content indicating 'Successful Build' if the end result of the build was 'Success'. 
-* The second branch called mavenFailure would be tracked by a Jenkins job called M1-mavenFailure. This job is configured such that the build would be triggered by the Service Hook when a commit is pushed to mavenFailure branch. For the post build task, we have sent email notifications to a list of users when the build status is either 'Failure' or 'Fixed'.
-
-For the ability to send email notifications, we configured a SMTP Server on our Digital Ocean Droplet by following this [link] (https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-as-a-send-only-smtp# DevOps-Project : Milestone 1 (M1)
-## Introduction ##
-
 We have used Jenkins as the Build Server for this Milestone. We used a Digital Ocean Droplet - Ubuntu 14.04 x64 to host the Jenkins Server. Finally, a sample Apache Maven Project with a single Junit Test was created for Build task.
 
 Our GitHub repository has two branches which are being tracked by two corresponding Jenkins jobs. Upon pushing a local commit to the remote branch, the build job corresponding to that specific branch will be triggered in Jenkins via Git Service Hooks that we configured in the GitHub repository.
