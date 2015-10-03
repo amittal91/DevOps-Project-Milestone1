@@ -1,2 +1,3 @@
 # DevOps-Project-Milestone1
-Milestone 1 for CSC 591 - DevOps Project
+## M1 ##
+Please refer to branch master for README.md, team information and screencast
